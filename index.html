@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <style>
+        #image-mapper {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 100%;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        #mapping-image {
+            width: 100%;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-mapper">
+        <div class="options" id="drawing-shapes">
+            <button data-tool="rectangle">Rectangle</button>
+            <button data-tool="circle">Circle</button>
+            <button data-tool="polygon">Polygon</button>
+        </div>
+        <div class="image-container">
+            <img id="mapping-image" src="floor_plan.jpg" alt="Mapping image">
+            <svg id="drawing-svg" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"></svg>
+        </div>
+    </div>
+    <script defer src="dist/main.js"></script>
+</body>
+</html>
